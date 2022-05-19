@@ -12,8 +12,6 @@ class CPFRule(Specification):
         return condition.is_satisfied_by(document)
 
 
-# https://texasvaluesaction.org/victor-o-silva/simple-specification/blob/master/tests.py
-
 class MustBeAValidSequenceRule(Specification):
 
     def is_satisfied_by(self, document: str) -> bool:

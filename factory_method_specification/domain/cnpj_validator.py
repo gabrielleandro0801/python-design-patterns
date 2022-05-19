@@ -8,4 +8,4 @@ class CNPJValidator(DocumentValidator):
         self.__specification: Any = specification
 
     def validate(self, document: str) -> bool:
-        pass
+        return self.__specification.is_satisfied_by(document)

@@ -2,6 +2,7 @@ from factory_method_specification.creators.abstract_document_validator_creator i
 from factory_method_specification.domain.abstract_validator import DocumentValidator
 
 if __name__ == '__main__':
+    # CPF
     person_type: str = 'F'
     document: str = "00000000000"
 
@@ -9,4 +10,14 @@ if __name__ == '__main__':
     is_valid = document_validator.validate(document)
 
     definition = "is" if is_valid else "is not"
-    print(f"Document [{document}] {definition} valid")
+    print(f"CPF [{document}] {definition} valid")
+
+    # CPF
+    person_type = 'J'
+    document: str = "00000000000191"
+
+    document_validator: DocumentValidator = DocumentValidatorCreator.create(person_type)
+    is_valid = document_validator.validate(document)
+
+    definition = "is" if is_valid else "is not"
+    print(f"CNPJ [{document}] {definition} valid")
