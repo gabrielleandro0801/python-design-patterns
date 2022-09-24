@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     # CPF
     person_type = 'J'
-    document: str = "00000000000191"
+    document: str = "0000000000191"
 
     document_validator: DocumentValidator = DocumentValidatorCreator.create(person_type)
     is_valid = document_validator.validate(document)
